@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+
+    <ImageView
+        android:id="@+id/menu"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:alpha="0.7"
+        android:src="@drawable/ic_menu_black_24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"/>
+    <TextView
+        android:id="@+id/titre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="95dp"
+        android:text="@string/title"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:fontFamily="serif"
+        android:textColor="#000000"
+        app:layout_constraintLeft_toRightOf="@id/menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.041"/>
+    <ImageView
+        android:id="@+id/panier"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="49dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_shopping_cart_black_24dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintLeft_toRightOf="@id/titre"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.041"
+        android:alpha="0.5"/>
+
+
+    <ImageView
+        android:id="@+id/bouton"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@drawable/ic_brightness_1_black_24dp_orange"
+        android:layout_marginLeft="25dp"
+        app:layout_constraintTop_toTopOf="@id/panier"
+        app:layout_constraintLeft_toLeftOf="@id/panier"
+        app:layout_constraintVertical_bias="0.04"
+        />
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:alpha="0.4"
+        android:background="@drawable/rounder_border_simple"
+        app:layout_constraintTop_toBottomOf="@id/menu"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/marque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:text="@string/marque"
+        app:layout_constraintLeft_toLeftOf="@id/search_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/search_view" />
+
+    //zone ou il y'a l'image de la chaussurre
+    <ImageView
+        android:id="@+id/arrows_gauche"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_keyboard_arrow_left_black_orange_24dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toBottomOf="@id/search_view"
+        app:layout_constraintLeft_toLeftOf="@id/search_view"
+
+    />
+
+    <ImageView
+        android:id="@+id/produit"
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:src="@mipmap/ic_launcher_produit_foreground"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="180dp"
+        app:layout_constraintRight_toLeftOf="@id/arrows_droite"
+        app:layout_constraintLeft_toRightOf="@id/arrows_gauche"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/arrows_droite"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+        android:layout_marginLeft="215dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toBottomOf="@id/search_view"
+        app:layout_constraintLeft_toRightOf="@id/arrows_gauche"
+        />
+       //attquons la zone des textes
+
+    <TextView
+        android:id="@+id/qualite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="@string/best"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:fontFamily="sans-serif"
+        android:textColor="#000000"
+        android:alpha="0.89"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/produit"
+        />
+    <TextView
+        android:id="@+id/selection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="@string/selection"
+        android:textStyle="normal"
+        android:textSize="30dp"
+        android:fontFamily="sans-serif"
+        android:textColor="#000000"
+        android:alpha="0.89"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/qualite"
+    />
+    <view
+        android:id="@+id/hr"
+        android:layout_width="30dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="190dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selection"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="@string/bame_basket"
+        android:textStyle="normal"
+        android:textSize="20dp"
+        android:fontFamily="sans-serif"
+        android:textColor="#000000"
+        android:layout_marginTop="10dp"
+        android:alpha="0.89"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hr"
+    />
+
+    <TextView
+        android:id="@+id/jump"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="30dp"
+        android:text="@string/prix_j"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:fontFamily="sans-serif"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="50dp"
+        android:alpha="0.89"
+        android:paddingTop="110dp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/rounder_border_orange"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        />
+    <ImageView
+        android:id="@+id/basket_j"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:src="@mipmap/ic_launcher_produit_jump_foreground"
+        app:layout_constraintTop_toTopOf="@id/jump"
+        app:layout_constraintLeft_toLeftOf="@id/arrows_gauche"
+        app:layout_constraintBottom_toTopOf="@id/jump"
+        app:layout_constraintVertical_bias="1"
+        />
+
+    <ImageView
+        android:id="@+id/favoris"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:layout_marginLeft="40dp"
+        android:alpha="0.4"
+        android:src="@drawable/ic_favorite_border_black_24dp"
+        app:layout_constraintTop_toTopOf="@id/jump"
+        app:layout_constraintLeft_toRightOf="@id/arrows_gauche"
+        app:layout_constraintTop_toBottomOf="@id/basket_j"
+
+        />
+    <TextView
+        android:id="@+id/montant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="110dp"
+        android:text="@string/monaie"
+        android:textStyle="normal"
+        android:textSize="15dp"
+        android:fontFamily="sans-serif"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="40dp"
+        android:alpha="0.8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/basket_j"
+        />
+    <TextView
+        android:id="@+id/nom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:text="@string/jumpman"
+        android:textStyle="normal"
+        android:textSize="16dp"
+        android:fontFamily="sans-serif"
+        android:textColor="#000000"
+        android:layout_marginTop="5dp"
+        android:alpha="0.8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/jump"
+        />
+
+
+    <TextView
+        android:id="@+id/air_max"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="30dp"
+        android:text="@string/prix_a"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:fontFamily="sans-serif"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="50dp"
+        android:alpha="0.89"
+        android:paddingTop="110dp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/rounder_border_orange"
+        app:layout_constraintLeft_toRightOf="@id/jump"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        />
+
+    <ImageView
+        android:id="@+id/basket_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="210dp"
+        android:src="@mipmap/ic_launcher_produit_air_foreground"
+        app:layout_constraintTop_toTopOf="@id/jump"
+        app:layout_constraintLeft_toLeftOf="@id/arrows_gauche"
+        app:layout_constraintBottom_toTopOf="@id/jump"
+        app:layout_constraintVertical_bias="1"
+        />
+
+
+    <ImageView
+        android:id="@+id/favoris_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:layout_marginLeft="110dp"
+        android:alpha="0.4"
+        android:src="@drawable/ic_favorite_border_black_24dp"
+        app:layout_constraintTop_toTopOf="@id/air_max"
+        app:layout_constraintLeft_toLeftOf="@id/air_max"
+        app:layout_constraintTop_toBottomOf="@id/basket_a"
+
+        />
+
+    <TextView
+        android:id="@+id/montant_A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:text="@string/monaie"
+        android:textStyle="normal"
+        android:textSize="15dp"
+        android:fontFamily="sans-serif"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="40dp"
+        android:alpha="0.8"
+        app:layout_constraintLeft_toLeftOf="@id/air_max"
+        app:layout_constraintTop_toBottomOf="@id/basket_a"
+        />
+    <TextView
+        android:id="@+id/nom_A"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="@string/air_max"
+        android:textStyle="normal"
+        android:textSize="16dp"
+        android:fontFamily="sans-serif"
+        android:textColor="#000000"
+        android:layout_marginTop="5dp"
+        android:alpha="0.8"
+        app:layout_constraintLeft_toLeftOf="@id/air_max"
+        app:layout_constraintTop_toBottomOf="@id/air_max"
+        />
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
